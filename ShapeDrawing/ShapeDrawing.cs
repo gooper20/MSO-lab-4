@@ -72,8 +72,14 @@ public class ShapeDrawingForm : Form
                 //   commands to draw the shapes
                 using(StreamWriter writer = new StreamWriter(stream))
                 {
-                        // Write strings to the file here using:
-                        //   writer.WriteLine("Hello World!");
+                    if(saveFileDialog.FileName.EndsWith(".tex"))
+                    {
+                        //Write to .tex file
+                    }
+                    if(saveFileDialog.FileName.EndsWith(".svg"))
+                    {
+                        //Write to .svg file
+                    }
                 }				
 			}
 		}
