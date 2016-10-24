@@ -11,7 +11,6 @@ public class Star : Shape
 	private int y;
 	private int width;
 	private int height;
-    public string SVGString;
 
 	public Star (int x, int y, int width, int height)
 	{
@@ -50,9 +49,15 @@ public class Star : Shape
                                 pts[(i+1) % numPoints].X,
                                 pts[(i+1) % numPoints].Y);
 		}
+
+        getString(pts);
+	}
+
+    private void getString(Point[] pts)
+    {
         svgClass = new SVGPolyline(pts);
         SVGString = svgClass.createSVGString();
-	}
+    }
 }
 
 

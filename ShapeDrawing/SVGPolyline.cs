@@ -21,7 +21,7 @@ using System.Text;
                 value += points[i].X + "," + points[i].Y + " ";
             }
             value += points[0].X + "," + points[0].Y + "\"";
-            value += "style=\"fill:none;stroke:black;stroke-width:1\" />";
+            value += " style=\"fill:none;stroke:black;stroke-width:1\" />";
             return value;
         }
     }

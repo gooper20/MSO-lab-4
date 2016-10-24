@@ -5,9 +5,11 @@ using System.Drawing;
     {
         protected SVGStringCreator svgClass;
         public string SVGString;
+
         public Shape()
         {
         }
+
         public abstract void Draw(Graphics Canvas);
 
     }

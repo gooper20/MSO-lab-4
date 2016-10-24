@@ -81,7 +81,14 @@ public class ShapeDrawingForm : Form
                     if (saveFileDialog.FileName.EndsWith(".svg"))
                     {
                         //write to .svg file
-                        throw new NotImplementedException();
+                        writer.WriteLine("<?xml version=\"1.0\" standalone=\"no\"?>");
+                        writer.WriteLine("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"");
+                        writer.WriteLine("\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">");
+                        writer.WriteLine("<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">");
+                        foreach (Shape shape in shapes)
+                            writer.WriteLine(shape.SVGString);
+                        writer.WriteLine("</svg>");
+                        //throw new NotImplementedException();
                     }
                 }				
 			}

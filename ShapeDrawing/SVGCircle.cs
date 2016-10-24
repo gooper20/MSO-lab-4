@@ -19,7 +19,7 @@ using System.Text;
             int cx = X + r;
             int cy = Y + r;
             value += "cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\"";
-            value += "stroke-width=\"1\" fill=\"none\" stroke=\"black\" />";
+            value += " stroke-width=\"1\" fill=\"none\" stroke=\"black\" />";
             return value;
         }
     }
