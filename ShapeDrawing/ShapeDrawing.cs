@@ -63,6 +63,7 @@ public class ShapeDrawingForm : Form
 
 		saveFileDialog.Filter = "TeX files|*.tex|SVG files|*.svg";
 		saveFileDialog.RestoreDirectory = true;
+        saveFileDialog.AddExtension = true;
 		
 		if(saveFileDialog.ShowDialog() == DialogResult.OK)
 		{
@@ -72,7 +73,16 @@ public class ShapeDrawingForm : Form
                 //   commands to draw the shapes
                 using(StreamWriter writer = new StreamWriter(stream))
                 {
-                    //write to .tex file
+                    if (saveFileDialog.FileName.EndsWith(".tex"))
+                    {
+                        //write to .tex file
+                        throw new NotImplementedException();
+                    }
+                    if (saveFileDialog.FileName.EndsWith(".svg"))
+                    {
+                        //write to .svg file
+                        throw new NotImplementedException();
+                    }
                 }				
 			}
 		}
