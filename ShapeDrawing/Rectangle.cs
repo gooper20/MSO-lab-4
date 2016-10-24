@@ -29,6 +29,7 @@ class Rectangle : Shape
 		Canvas.DrawLine(pen,x+width,y,x+width,y+height);
 		Canvas.DrawLine(pen,x+width,y+height,x,y+height);
 		Canvas.DrawLine(pen,x,y+height,x,y);
+        //Maakt een array waar SVGPolyline wat mee kan
         Point a, b, c, d;
         a = new Point(x, y);
         b = new Point(x, y+width);
