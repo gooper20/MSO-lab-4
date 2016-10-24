@@ -55,13 +55,13 @@ public class ShapeDrawingForm : Form
 
     }
 
-    // What to do when the user wants to export a TeX file
+    // What to do when the user wants to export a file
 	private void exportHandler (object sender, EventArgs e)
 	{
 		Stream stream;
 		SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-		saveFileDialog.Filter = "TeX files|*.tex";
+		saveFileDialog.Filter = "TeX files|*.tex|SVG files|*.svg";
 		saveFileDialog.RestoreDirectory = true;
 		
 		if(saveFileDialog.ShowDialog() == DialogResult.OK)
