@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ShapeDrawing
+abstract public class SVGStringCreator
 {
-    abstract class SVGStringCreator
-    {
-        public abstract string createSVGString();
-    }
+    public abstract string createSVGString();
 }

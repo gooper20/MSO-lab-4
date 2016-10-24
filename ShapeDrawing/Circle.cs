@@ -6,11 +6,10 @@ using System.Text;
 
 class Circle : Shape
 {
-
     private int x;
 	private int y;
 	private int size;
-
+    public string SVGString;
     public Circle(int x, int y, int size)
     {
 		this.x = x;
@@ -22,6 +21,10 @@ class Circle : Shape
     {
 		Pen pen = new Pen(Color.Black);
         Canvas.DrawEllipse(pen, this.x, this.y, this.size, this.size);
+        svgClass = new SVGCircle(size, x, y);
+        SVGString = svgClass.createSVGString();
     }
+
+    
 
 }
